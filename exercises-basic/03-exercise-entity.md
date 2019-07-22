@@ -14,7 +14,7 @@ Le but de l'exercice est de comprendre le fonctionnement de doctrine, des entit�
 
 La première chose à faire est de mettre à jour le fichier `.env` en fonction de votre environnement de développement. Notamment `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`.
 Ensuite créez une base de données dans votre environnement local, soit manuellement, soit via la ligne de commande:
-  
+
 ```bash
 php bin/console doctrine:database:create
 ```
@@ -46,14 +46,12 @@ La commande pour créer une nouvelle entité est:
 php bin/console make:entity
 
 ```
-Le nom de l'entité se compose ainsi `MyEntity`.
-
-Et on choisira les "annotations" pour le format.
+Le nom de l'entité sera `Article`.
 
 Il faut ensuite répondre aux questions posées pour ajouter les différents champs de l'entité (Nom de l'entité, puis son type...).
 Lorsque toutes les propriétés de votre entité sont ajoutées, appuyez sur "Entrer" à nouveau.
 
-Maintenant que notre entité est créée, allez dans votre bundle, un dossier Entity a été ajouté. Il contient votre nouvelle entité.
+Maintenant que notre entité est créée, allez dans votre dossier `src`, un dossier Entity a été ajouté. Il contient votre nouvelle entité.
 
 A présent, il faut mettre à jour notre base de données.
 Pour voir les requêtes à faire pour syncroniser nos entités à la BDD sont :
